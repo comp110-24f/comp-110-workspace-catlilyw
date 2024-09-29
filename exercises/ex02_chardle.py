@@ -3,9 +3,14 @@
 __author__ = "730655044"
 
 
+def main() -> None:
+    """Calling contains_char"""
+    contains_char(word=input_word(), letter=input_letter())
+
+
 def input_word() -> str:
     """The word that the player will input."""
-    word: str = input("Enter a 5 character word: ")
+    word: str = input("Enter a 5-character word: ")
     if len(word) == 5:
         print("'" + word + "'")  # add ' to match format
     else:
@@ -49,11 +54,6 @@ def contains_char(word: str, letter: str) -> None:
         print("1 instance of " + letter + " found in " + word)
     else:
         print(str(count) + " instances of " + letter + " found in " + word)
-
-
-def main():
-    """Calling contains_char"""
-    contains_char(word=input_word(), letter=input_letter())
 
 
 if __name__ == "__main__":
