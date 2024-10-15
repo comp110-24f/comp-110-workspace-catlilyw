@@ -16,7 +16,7 @@ def w_sum(vals: list[float]) -> float:
 def f_sum(vals: list[float]) -> float:
     """Use a for...in... list to sum all the values in a list of floats"""
     sum_vals: float = 0
-    for elem in vals:
+    for elem in vals:  # no control over range, just goes through every item
         sum_vals += elem
     return sum_vals
 
@@ -24,11 +24,8 @@ def f_sum(vals: list[float]) -> float:
 def f_range_sum(vals: list[float]) -> float:
     """Use a for...in(range)... loop to sum all the values of a list of floats"""
     sum_vals: float = 0
-    idx: int = 0
-    for idx in range(0, len(vals) - 1):
+    for idx in range(0, len(vals)):  # relate it to idx so elems get added even if
+        # they are higher than the value of the length of the vals list
         sum_vals += vals[idx]
         idx += 1
     return sum_vals
-
-
-print(f_range_sum([1.0, 2.3, 4.6, 3.1]))
