@@ -15,7 +15,6 @@ def find_and_remove_max(test_list: list[int]) -> int:
     while index < len(test_list):
         if test_list[index] == max_value:
             test_list.pop(index)  # pop the index not the value
-            index += 1
         else:
             index += 1
     # print(test_list) to check!
